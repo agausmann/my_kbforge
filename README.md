@@ -1,3 +1,3 @@
 # My KBForge
 
-My personal use cases for [KBForge](https://github.com/agausmann/kbforge).
+My own personal projects using [KBForge](https://github.com/agausmann/kbforge).
