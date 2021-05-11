@@ -68,6 +68,7 @@ dependencies = [
 [[package]]
 name = "kbforge"
 version = "0.1.0"
+source = "git+https://github.com/agausmann/kbforge.git#32335a7ec8b157ee753e0fd4d1b68643c890941f"
 dependencies = [
  "atmega32u4-hal",
  "embedded-hal",
