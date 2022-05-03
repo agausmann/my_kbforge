@@ -8,11 +8,17 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-atmega32u4-hal = { git = "https://github.com/Rahix/avr-hal.git" }
 avr-std-stub = "1.0"
 
+[dependencies.atmega-hal]
+git = "https://github.com/agausmann/avr-hal.git"
+branch = "patch/kbforge"
+features = ["atmega32u4"]
+
+
 [dependencies.kbforge]
-git = "https://github.com/agausmann/kbforge.git"
+path = "../../kbforge"
+#git = "https://github.com/agausmann/kbforge.git"
 default-features = false
 features = ["planck_rev2"]
 
@@ -21,3 +27,6 @@ opt-level = "s"
 
 [profile.release]
 opt-level = "s"
+
+[patch.crates-io]
+avr-device = { path = "/home/goose/build/avr-device" }

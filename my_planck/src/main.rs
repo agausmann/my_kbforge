@@ -1,10 +1,10 @@
 #![no_std]
 #![cfg_attr(not(test), no_main)]
-#![feature(const_generics, const_evaluatable_checked)]
+#![feature(generic_const_exprs)]
 
 extern crate avr_std_stub;
 
-use atmega32u4_hal::pac::Peripherals;
+use atmega_hal::pac::Peripherals;
 use kbforge::board::planck_rev2::build_system;
 use kbforge::keycode::qmk::*;
 use kbforge::keycode::Keycode;
