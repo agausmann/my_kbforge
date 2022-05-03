@@ -14,7 +14,7 @@ const CK_LOWR: Keycode = Keycode::User(0);
 const CK_RAIS: Keycode = Keycode::User(1);
 const LAYER_LOWER: usize = 1;
 const LAYER_RAISE: usize = 2;
-const LAYER_SETUP: usize = 2;
+const LAYER_SETUP: usize = 3;
 
 #[no_mangle]
 #[cfg(not(test))]
