@@ -52,7 +52,7 @@ static LAYERS: [[[Keycode; 12]; 4]; 4] = [
 #[cfg(not(test))]
 pub extern "C" fn main() {
     let keymap = Layered {
-        layers: LAYERS,
+        layers: &LAYERS,
         layer_mask: 0x00000001,
     };
 
