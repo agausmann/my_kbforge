@@ -19,14 +19,15 @@ features = ["atmega32u4"]
 [dependencies.kbforge]
 path = "../../kbforge"
 #git = "https://github.com/agausmann/kbforge.git"
-default-features = false
 features = ["planck_rev2"]
 
 [profile.dev]
 opt-level = "s"
+lto = true
 
 [profile.release]
 opt-level = "s"
+lto = true
 
 [patch.crates-io]
 avr-device = { path = "/home/goose/build/avr-device" }
