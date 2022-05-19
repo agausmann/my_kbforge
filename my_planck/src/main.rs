@@ -4,6 +4,7 @@
 
 extern crate avr_std_stub;
 
+use atmega_hal::entry;
 use atmega_hal::pac::Peripherals;
 use kbforge::board::planck_rev2::build_system;
 use kbforge::keycode::qmk::*;
@@ -48,9 +49,8 @@ static LAYERS: [[[Keycode; 12]; 4]; 4] = [
     ],
 ];
 
-#[no_mangle]
-#[cfg(not(test))]
-pub extern "C" fn main() {
+#[entry]
+fn main() -> ! {
     let keymap = Layered {
         layers: &LAYERS,
         layer_mask: 0x00000001,
