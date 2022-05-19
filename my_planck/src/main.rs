@@ -30,8 +30,8 @@ static LAYERS: [[[Keycode; 12]; 4]; 4] = [
     ],
     // 1: Lower
     [
-        [KC_ESC , KC_F1  , KC_F2  , KC_F3  , KC_F4  , _______, KC_INS , KC_HOME, KC_UP  , KC_END , KC_PGUP, _______],
-        [_______, KC_F5  , KC_F6  , KC_F7  , KC_F8  , _______, KC_DEL , KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, _______],
+        [KC_ESC , KC_F1  , KC_F2  , KC_F3  , KC_F4  , _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END , KC_INS , _______],
+        [_______, KC_F5  , KC_F6  , KC_F7  , KC_F8  , _______, KC_LEFT, KC_DOWN, KC_UP  , KC_RGHT, KC_DEL , _______],
         [_______, KC_F9  , KC_F10 , KC_F11 , KC_F12 , _______, _______, KC_PAUS, KC_PSCR, KC_SLCK, _______, _______],
         [_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______],
     ],
