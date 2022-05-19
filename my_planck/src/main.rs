@@ -11,11 +11,13 @@ use kbforge::keycode::qmk::*;
 use kbforge::keycode::Keycode;
 use kbforge::keymap::Layered;
 
-const CK_LOWR: Keycode = Keycode::User(0);
-const CK_RAIS: Keycode = Keycode::User(1);
-const LAYER_LOWER: usize = 1;
-const LAYER_RAISE: usize = 2;
-const LAYER_SETUP: usize = 3;
+// TODO activate setup if both are held
+const CK_LOWR: Keycode = MO(LAYER_LOWER);
+const CK_RAIS: Keycode = MO(LAYER_RAISE);
+
+const LAYER_LOWER: u8 = 1;
+const LAYER_RAISE: u8 = 2;
+const LAYER_SETUP: u8 = 3;
 
 #[rustfmt::skip]
 static LAYERS: [[[Keycode; 12]; 4]; 4] = [
@@ -59,6 +61,6 @@ fn main() -> ! {
     let peripherals = Peripherals::take().unwrap();
     let mut system = build_system(peripherals, keymap);
     loop {
-        system.poll().map_err(|_| ()).unwrap();
+        system.poll().ok();
     }
 }
