@@ -6,10 +6,11 @@ extern crate avr_std_stub;
 
 use atmega_hal::entry;
 use atmega_hal::pac::Peripherals;
-use kbforge::board::planck_rev2::build_system;
+use kbforge::board::planck_rev2::PlanckRev2;
 use kbforge::keycode::qmk::*;
 use kbforge::keycode::Keycode;
 use kbforge::keymap::Layered;
+use kbforge::system::System;
 
 // TODO activate setup if both are held
 const CK_LOWR: Keycode = MO(LAYER_LOWER);
@@ -59,7 +60,8 @@ fn main() -> ! {
     };
 
     let peripherals = Peripherals::take().unwrap();
-    let mut system = build_system(peripherals, keymap);
+    let keyboard = PlanckRev2::new(peripherals);
+    let mut system = System::new(keymap, keyboard);
     loop {
         system.poll().ok();
     }
