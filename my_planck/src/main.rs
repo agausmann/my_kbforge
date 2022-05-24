@@ -5,11 +5,11 @@
 extern crate avr_std_stub;
 
 use atmega_hal::entry;
-use kbforge::board::planck_rev2::PlanckRev2;
-use kbforge::keycode::qmk::*;
-use kbforge::keycode::Keycode;
-use kbforge::keymap::Layered;
-use kbforge::system::System;
+use polybius::board::planck_rev2::PlanckRev2;
+use polybius::keycode::qmk::*;
+use polybius::keycode::Keycode;
+use polybius::keymap::Layered;
+use polybius::system::System;
 
 // TODO activate setup if both are held
 const CK_LOWR: Keycode = MO(LAYER_LOWER);

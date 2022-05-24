@@ -1,3 +1,4 @@
-# My KBForge
+# My Keyboards
 
-My own personal projects using [KBForge](https://github.com/agausmann/kbforge).
+Personal keymaps for the keyboards I own. Built with
+[Polybius](https://github.com/agausmann/polybius)!
