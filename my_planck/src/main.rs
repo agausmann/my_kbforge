@@ -53,11 +53,7 @@ static LAYERS: [[[Keycode; 12]; 4]; 4] = [
 
 #[entry]
 fn main() -> ! {
-    let keymap = Layered {
-        layers: &LAYERS,
-        layer_mask: 0x00000001,
-    };
-
+    let keymap = Layered::new(&LAYERS);
     let keyboard = PlanckRev2::new();
     let mut system = System::new(keymap, keyboard);
     loop {

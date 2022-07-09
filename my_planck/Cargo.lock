@@ -21,6 +21,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "autocfg"
+version = "1.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d468802bab17cbc0cc575e9b053f41e72aa36bfa6b7f55e3529ffa43161b97fa"
+
+[[package]]
 name = "avr-device"
 version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -109,6 +115,22 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a357d28ed41a50f9c765dbfe56cbc04a64e53e5fc58ba79fbc34c10ef3df831f"
 
 [[package]]
+name = "fullhouse"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e742589c47e971e0c5dfcb86efda203441c71dced4df8b6bd4e1f3416f6ebd93"
+
+[[package]]
+name = "lock_api"
+version = "0.4.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "327fa5b6a6940e4699ec49a9beae1ea4845c6bab9314e4f84ac68742139d8c53"
+dependencies = [
+ "autocfg",
+ "scopeguard",
+]
+
+[[package]]
 name = "my_planck"
 version = "0.1.0"
 dependencies = [
@@ -141,10 +163,14 @@ checksum = "0c520e05135d6e763148b6426a837e239041653ba7becd2e538c076c738025fc"
 [[package]]
 name = "polybius"
 version = "0.1.0"
+source = "git+https://github.com/agausmann/polybius.git#c58ee1f13dfa587c84c3c3a411e365615e97f44b"
 dependencies = [
  "atmega-hal",
  "atmega-usbd",
+ "avr-hal-generic",
  "embedded-hal",
+ "fullhouse",
+ "lock_api",
  "usb-device",
  "usbd-hid",
 ]
@@ -187,6 +213,12 @@ name = "rustversion"
 version = "1.0.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f2cc38e8fa666e2de3c4aba7edeb5ffc5246c1c2ed0e3d17e560aeeba736b23f"
+
+[[package]]
+name = "scopeguard"
+version = "1.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d29ab0c6d3fc0ee92fe66e2d99f700eab17a8d57d1c1d3b748380fb20baa78cd"
 
 [[package]]
 name = "semver"

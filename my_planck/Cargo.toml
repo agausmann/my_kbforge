@@ -17,8 +17,8 @@ features = ["atmega32u4", "rt"]
 
 
 [dependencies.polybius]
-path = "../../polybius"
-#git = "https://github.com/agausmann/polybius.git"
+# path = "../../polybius/polybius"
+git = "https://github.com/agausmann/polybius.git"
 features = ["planck_rev2"]
 
 [profile.dev]
