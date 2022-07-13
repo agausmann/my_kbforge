@@ -1,0 +1,28 @@
+[package]
+publish = false
+name = "my_viterbi"
+version = "0.1.0"
+authors = ["Adam Gausmann <agausmann@fastmail.com>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+avr-std-stub = "1.0"
+
+[dependencies.atmega-hal]
+git = "https://github.com/Rahix/avr-hal.git"
+branch = "main"
+features = ["atmega32u4", "rt"]
+
+[dependencies.polybius-viterbi]
+path = "../../polybius/keyboards/viterbi"
+# git = "https://github.com/agausmann/polybius.git"
+
+[profile.dev]
+opt-level = "s"
+lto = true
+
+[profile.release]
+opt-level = "s"
+lto = true
