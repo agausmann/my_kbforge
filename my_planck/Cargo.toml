@@ -15,11 +15,9 @@ git = "https://github.com/Rahix/avr-hal.git"
 branch = "main"
 features = ["atmega32u4", "rt"]
 
-
-[dependencies.polybius]
-# path = "../../polybius/polybius"
-git = "https://github.com/agausmann/polybius.git"
-features = ["planck_rev2"]
+[dependencies.polybius-planck]
+path = "../../polybius/keyboards/planck"
+# git = "https://github.com/agausmann/polybius.git"
 
 [profile.dev]
 opt-level = "s"
